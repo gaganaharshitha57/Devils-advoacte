@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0c0a;
+    color: #e8e0d2;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #302c25;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo-mark {
+    color: #c8a96b;
+    border: 1px solid #b5965c;
+    padding: 8px;
+}
+
+.back-home,
+.signup-text a {
+    color: #c8a96b;
+    text-decoration: none;
+}
+
+.login-section {
+    min-height: calc(100vh - 130px);
+    padding: 70px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.login-intro {
+    max-width: 600px;
+}
+
+.small-label,
+.card-label {
+    color: #b5965c;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.login-intro h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    margin: 20px 0;
+}
+
+.login-intro h1 span {
+    color: #c8a96b;
+}
+
+.intro-text,
+.quote,
+.card-description {
+    color: #99938a;
+    line-height: 1.6;
+}
+
+.mini-line {
+    width: 50px;
+    height: 1px;
+    background: #b5965c;
+    margin: 25px 0;
+}
+
+.login-card {
+    width: 420px;
+    padding: 40px;
+    background: #15130f;
+    border: 1px solid #302c25;
+}
+
+.card-top h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.input-group {
+    margin-top: 22px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    background: #0d0c0a;
+    border: 1px solid #39352e;
+    color: #e8e0d2;
+}
+
+.password-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.password-label a {
+    color: #b5965c;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.remember {
+    display: block;
+    margin: 20px 0;
+    color: #99938a;
+}
+
+.login-button,
+.guest-button {
+    width: 100%;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.login-button {
+    background: #b5965c;
+    border: none;
+    font-weight: bold;
+}
+
+.guest-button {
+    background: transparent;
+    border: 1px solid #39352e;
+    color: #e8e0d2;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #777168;
+}
+
+.signup-text {
+    text-align: center;
+    margin-top: 20px;
+    color: #777168;
+    font-size: 13px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #625d55;
+    font-size: 12px;
+}
+/* Password Rules */
+
+.password-rules {
+    margin-top: 14px;
+    padding: 14px 16px;
+    background: #0d0c0a;
+    border: 1px solid #302c25;
+    border-left: 2px solid #b5965c;
+}
+
+.rules-title {
+    color: #c8a96b;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.rule {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #99938a;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.rule span {
+    color: #b5965c;
+    font-size: 10px;
+    letter-spacing: 1px;
+}

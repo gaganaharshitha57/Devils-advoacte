@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From Idea to Reality | Devil's Advocate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='idea_gallery.css') }}">
+</head>
+<body>
+    <header class="gallery-nav">
+        <a href="/" class="brand">DEVIL'S ADVOCATE<span>.</span></a>
+        <a href="javascript:history.back()" class="back-link">
+            <span aria-hidden="true">←</span> Back to evaluation
+        </a>
+    </header>
+
+    <main class="gallery-main">
+        <section class="intro">
+            <p class="eyebrow">
+                <span class="status-dot"></span>
+                YOUR NEXT STEP STARTS HERE
+            </p>
+
+            <h1>From idea <span>to reality.</span></h1>
+
+            <p class="intro-text">
+                Every great idea starts somewhere.
+                Explore visual inspiration for what yours could become.
+            </p>
+
+            <form class="idea-search" action="" method="GET">
+                <span class="search-icon" aria-hidden="true">⌕</span>
+                <input
+                    type="text"
+                    name="idea"
+                    value="{{ idea or '' }}"
+                    placeholder="Enter your business idea..."
+                    aria-label="Business idea"
+                    required
+                >
+                <button type="submit">Explore idea <span>→</span></button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">VISUAL EXPLORATION</p>
+                    <h2>Your idea, visualized.</h2>
+                </div>
+
+                <span class="result-label">
+                    {% if images %}
+                        {{ images|length }} images found
+                    {% else %}
+                        Image discovery
+                    {% endif %}
+                </span>
+            </div>
+
+            {% if images %}
+                <div class="image-grid">
+                    {% for image in images %}
+                        <article class="image-card">
+                            <a href="{{ image.unsplash_url }}"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="image-link">
+                                <img
+                                    src="{{ image.url }}"
+                                    alt="{{ image.alt }}"
+                                    loading="lazy"
+                                >
+                                <span class="image-overlay">
+                                    View image source ↗
+                                </span>
+                            </a>
+
+                            <div class="image-caption">
+                                <p>{{ image.alt }}</p>
+                                <span>
+                                    PHOTO BY
+                                    <a href="{{ image.photographer_url }}"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        {{ image.photographer }}
+                                    </a>
+                                    · UNSPLASH
+                                </span>
+                            </div>
+                        </article>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon" aria-hidden="true">✳</div>
+                    <h3>Your idea deserves a closer look.</h3>
+                    <p>
+                        Enter your business idea above to discover
+                        relevant visual references.
+                    </p>
+                </div>
+            {% endif %}
+        </section>
+
+        <footer class="gallery-footer">
+            <span>DEVIL'S ADVOCATE</span>
+            <span>Think critically. Build boldly.</span>
+        </footer>
+    </main>
+</body>
+</html>

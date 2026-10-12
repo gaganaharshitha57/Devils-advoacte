@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Devil's Advocate</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-mark">DA</span>
+            <span>DEVIL'S ADVOCATE</span>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="nav-button">
+            Home
+        </a>
+
+    </header>
+
+    <main>
+
+        <section class="dashboard">
+
+            <p class="small-label">YOUR DASHBOARD</p>
+
+            <h1>
+                Think deeper.<br>
+                <span>Question everything.</span>
+            </h1>
+
+            <p class="intro-text">
+                Welcome to your business idea evaluation space.
+                Challenge your ideas and discover possible risks.
+            </p>
+
+            <div class="dashboard-card">
+
+                <div>
+                    <p class="card-label">START EVALUATION</p>
+
+                    <h2>Have a business idea?</h2>
+
+                    <p>
+                        Enter your idea and let Devil's Advocate
+                        identify possible flaws, risks and weaknesses.
+                    </p>
+                </div>
+
+                <a href="/evaluate" class="nav-button">
+                        Evaluate New Idea →
+                    </a>
+
+                    <a href="{{ url_for('history') }}" class="nav-button">
+                        View Search History →
+                    </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Devil's Advocate · AI-powered business idea evaluation</p>
+    </footer>
+
+</body>
+
+</html>

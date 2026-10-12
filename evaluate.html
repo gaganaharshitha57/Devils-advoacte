@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evaluate Idea | Devil's Advocate</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-mark">DA</span>
+            <span>DEVIL'S ADVOCATE</span>
+        </div>
+
+        <a href="{{ url_for('dashboard') }}" class="nav-button">
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <main class="evaluation-page">
+
+        <section class="evaluation-intro">
+
+            <p class="small-label">01 / IDEA EVALUATION</p>
+
+            <h1>
+                Challenge your<br>
+                <span>business idea.</span>
+            </h1>
+
+            <p class="intro-text">
+                Tell us what you're building. We'll challenge the thinking
+                behind it and uncover possible flaws, risks and weaknesses.
+            </p>
+
+        </section>
+
+
+        <section class="evaluation-card">
+            </section>
+
+
+<div class="thinking-panel">
+
+    <div class="thinking-title">
+        DEVIL'S ADVOCATE
+    </div>
+
+    <div class="thinking-line"></div>
+
+    <div class="thinking-status">
+        <span class="status-dot"></span>
+        QUESTIONING THE IDEA
+    </div>
+
+    <div class="thinking-flow">
+        <span>IDEA</span>
+        <span>→</span>
+        <span>QUESTION</span>
+        <span>→</span>
+        <span>CHALLENGE</span>
+    </div>
+
+</div>
+
+
+<section class="evaluation-card">
+
+            <div class="evaluation-card-header">
+
+                <div>
+                    <p class="card-label">BUSINESS INFORMATION</p>
+
+                    <h2>Tell us about your idea</h2>
+
+                    <p class="card-description">
+                        Give us the basics. We'll do the questioning.
+                    </p>
+                </div>
+
+                <span class="step-number">01</span>
+
+            </div>
+
+
+            <form method="POST" action="/evaluate">
+
+                <div class="input-group">
+
+                    <label for="title">
+                        BUSINESS IDEA / TITLE
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="e.g. Affordable healthy food delivery"
+                        required>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="description">
+                        DESCRIBE YOUR IDEA
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Explain what you're planning to build, sell or offer..."
+                        required></textarea>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label for="customers">
+                            TARGET CUSTOMERS
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customers"
+                            name="customers"
+                            placeholder="e.g. College students">
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="budget">
+                            ESTIMATED INVESTMENT
+                        </label>
+
+                        <input
+                            type="text"
+                            id="budget"
+                            name="budget"
+                            placeholder="e.g. ₹50,000">
+
+                    </div>
+
+                </div>
+
+
+                <div class="evaluation-action">
+
+                    <p>
+                        Ready to challenge your idea?
+                    </p>
+
+                    <button type="submit" class="evaluate-button">
+                        Challenge Idea
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Devil's Advocate · AI-powered business idea evaluation
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

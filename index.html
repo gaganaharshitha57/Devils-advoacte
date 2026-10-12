@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Devil's Advocate | Business Idea Evaluation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="logo-mark">DA</span>
+            <span>DEVIL'S ADVOCATE</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#features">Features</a>
+        </div>
+
+        <a href="{{ url_for('login') }}" class="nav-button">Login</a>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-label">BUSINESS IDEA EVALUATION SYSTEM</p>
+
+            <h1>
+                Think Better.
+                <span>Question Everything.</span>
+            </h1>
+
+            <p class="hero-text">
+                Have a business idea? Before you build it, challenge it.
+                Devil's Advocate helps you look at your idea from different
+                angles and discover what may need improvement.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#evaluate" class="primary-button">
+                    Evaluate Your Idea →
+                </a>
+
+                <a href="#how-it-works" class="secondary-button">
+                    How It Works
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Professional evaluation visual -->
+
+        <div class="evaluation-visual">
+
+            <div class="visual-top">
+                <span>IDEA REVIEW</span>
+                <span class="status">READY</span>
+            </div>
+
+            <div class="idea-title">
+                <span class="idea-icon">?</span>
+
+                <div>
+                    <small>BUSINESS IDEA</small>
+                    <h3>Smart Food Delivery</h3>
+                </div>
+            </div>
+
+
+            <div class="review-line">
+                <span>Market Potential</span>
+                <span class="line-value">Good</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-fill"></div>
+            </div>
+
+
+            <div class="review-line">
+                <span>Possible Risks</span>
+                <span class="line-value warning">3 Found</span>
+            </div>
+
+            <div class="risk-box">
+
+                <div>
+                    <span class="risk-dot"></span>
+                    High competition
+                </div>
+
+                <div>
+                    <span class="risk-dot"></span>
+                    Customer retention
+                </div>
+
+            </div>
+
+
+            <div class="review-bottom">
+
+                <div>
+                    <small>READINESS</small>
+                    <strong>72%</strong>
+                </div>
+
+                <div class="review-circle">
+                    <span>+</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about section">
+
+        <div class="section-heading">
+
+            <p class="small-label">ABOUT THE SYSTEM</p>
+
+            <h2>
+                Every good idea deserves
+                <span>a second question.</span>
+            </h2>
+
+            <p>
+                Devil's Advocate is designed to look beyond the excitement
+                of a new business idea. It helps users understand possible
+                weaknesses, risks and opportunities before moving forward.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section id="how-it-works" class="process section">
+
+        <div class="section-heading center">
+
+            <p class="small-label">THE PROCESS</p>
+
+            <h2>How It Works</h2>
+
+            <p>
+                A simple process to understand your idea before you take
+                the next step.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process-card">
+
+                <span class="card-number">01</span>
+
+                <h3>Share Your Idea</h3>
+
+                <p>
+                    Enter your business idea and provide a short
+                    description of what you want to build.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="card-number">02</span>
+
+                <h3>Challenge It</h3>
+
+                <p>
+                    The system looks at different parts of the idea
+                    and identifies possible concerns and opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <span class="card-number">03</span>
+
+                <h3>Understand the Result</h3>
+
+                <p>
+                    Get a clear evaluation that can help you improve
+                    your idea before implementation.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section id="features" class="features section">
+
+        <div class="section-heading center">
+
+            <p class="small-label">WHAT WE CHECK</p>
+
+            <h2>Built to Question Your Idea</h2>
+
+            <p>
+                The system focuses on the areas that can affect a
+                business idea.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-number">01</div>
+
+                <h3>Idea Evaluation</h3>
+
+                <p>
+                    Understand how practical and clear your business
+                    idea is.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-number">02</div>
+
+                <h3>Risk Detection</h3>
+
+                <p>
+                    Identify possible problems that may affect the
+                    business.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-number">03</div>
+
+                <h3>SWOT Analysis</h3>
+
+                <p>
+                    Look at strengths, weaknesses, opportunities and
+                    threats in one place.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-number">04</div>
+
+                <h3>Improvement Suggestions</h3>
+
+                <p>
+                    Get simple suggestions that can help make the idea
+                    stronger.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EVALUATE CTA ================= -->
+
+    <section id="evaluate" class="evaluate">
+
+        <div class="evaluate-content">
+
+            <p class="small-label">READY TO QUESTION YOUR IDEA?</p>
+
+            <h2>
+                Don't just build an idea.
+                <span>Challenge it first.</span>
+            </h2>
+
+            <p>
+                Find the weak points, understand the risks and make
+                your idea stronger.
+            </p>
+
+            <a href="#login" class="primary-button">
+                Start Evaluation →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOGIN ================= -->
+
+    <section id="login" class="login section">
+
+        <div class="section-heading center">
+
+            <p class="small-label">GET STARTED</p>
+
+            <h2>Login to Continue</h2>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            <span class="logo-mark">DA</span>
+            <span>DEVIL'S ADVOCATE</span>
+        </div>
+
+        <p>
+            AI Business Idea Evaluation System
+        </p>
+
+        <span class="copyright">
+            © 2026 Devil's Advocate
+        </span>
+
+    </footer>
+
+
+</body>
+
+</html>

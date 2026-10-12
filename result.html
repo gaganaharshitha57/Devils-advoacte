@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Evaluation Results | Devil's Advocate</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-mark">DA</span>
+        <span>DEVIL'S ADVOCATE</span>
+    </div>
+
+    <a href="{{ url_for('dashboard') }}" class="dashboard-link">
+    ← Dashboard
+</a>
+</header>
+
+<main class="result-page flowchart-page">
+
+    <section class="result-intro">
+        <p class="card-label">EVALUATION COMPLETE</p>
+        <h1>Here's what <span>we found.</span></h1>
+        <p class="intro-text">
+            Follow the journey from your business idea
+            to its final readiness verdict.
+        </p>
+    </section>
+
+    <section class="flowchart">
+
+        <!-- STAGE 1: YOUR IDEA -->
+        <article class="flow-stage stage-one">
+            <div class="flow-number">01</div>
+
+            <div class="flow-content">
+                <p class="flow-label">THE STARTING POINT</p>
+                <h2>Your Business Idea</h2>
+
+                <div class="flow-detail">
+                    <h3>{{ title }}</h3>
+                    <p>{{ description }}</p>
+
+                    <div class="flow-meta">
+                        <p><strong>Target customers</strong><br>
+                            {{ customers }}</p>
+
+                        <p><strong>Estimated budget</strong><br>
+                            {{ budget }}</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="flow-connector">
+            <div class="flow-line"></div>
+            <span>↓</span>
+        </div>
+
+        <!-- STAGE 2: STRENGTHS -->
+        <article class="flow-stage stage-two">
+            <div class="flow-number">02</div>
+
+            <div class="flow-content">
+                <p class="flow-label">WHAT WORKS IN YOUR FAVOUR</p>
+                <h2>Strengths & Opportunities</h2>
+
+                <div class="flow-columns">
+                    <div class="flow-detail">
+                        <h3>Strengths</h3>
+                        <ul>
+                            {% for item in strengths %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="flow-detail">
+                        <h3>Opportunities</h3>
+                        <ul>
+                            {% for item in opportunities %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="flow-connector">
+            <div class="flow-line"></div>
+            <span>↓</span>
+        </div>
+
+        <!-- STAGE 3: CHALLENGES -->
+        <article class="flow-stage stage-three">
+            <div class="flow-number">03</div>
+
+            <div class="flow-content">
+                <p class="flow-label">THE DEVIL'S CHALLENGE</p>
+                <h2>Weaknesses, Threats & Risks</h2>
+
+                <div class="flow-columns">
+                    <div class="flow-detail">
+                        <h3>Weaknesses</h3>
+                        <ul>
+                            {% for item in weaknesses %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="flow-detail">
+                        <h3>Threats</h3>
+                        <ul>
+                            {% for item in threats %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="flow-detail">
+                        <h3>Risks</h3>
+                        <ul>
+                            {% for item in risks %}
+                            <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <div class="flow-connector">
+            <div class="flow-line"></div>
+            <span>↓</span>
+        </div>
+
+        <!-- STAGE 4: SUGGESTIONS -->
+        <article class="flow-stage stage-four">
+            <div class="flow-number">04</div>
+
+            <div class="flow-content">
+                <p class="flow-label">YOUR NEXT MOVE</p>
+                <h2>Suggestions to Improve</h2>
+
+                <div class="flow-detail">
+                    <ul>
+                        {% for item in suggestions %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+        <div class="flow-connector">
+            <div class="flow-line"></div>
+            <span>↓</span>
+        </div>
+
+        <!-- STAGE 5: FINAL VERDICT -->
+        <article class="flow-stage stage-five">
+            <div class="flow-number">05</div>
+
+            <div class="flow-content">
+                <p class="flow-label">THE FINAL VERDICT</p>
+                <h2>Business Readiness</h2>
+
+                <div class="flow-detail final-result">
+                    <div class="flow-score">
+                        <span class="score-number">{{ readiness_score }}</span>
+                        <span class="score-total">/ 100</span>
+                    </div>
+
+                    <div class="flow-score-track">
+                        <div class="flow-score-fill"
+                             style="width: {{ readiness_score }}%;">
+                        </div>
+                    </div>
+
+                    <h3>Your Verdict</h3>
+                    <p>{{ verdict }}</p>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+<div class="flow-footer">
+
+    <a href="{{ url_for('idea_gallery', idea=title) }}"
+       class="flow-back-link">
+        From Idea to Reality →
+    </a>
+
+
+</div>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 Devil's Advocate · Business ideas, challenged.</p>
+</footer>
+
+</body>
+</html>

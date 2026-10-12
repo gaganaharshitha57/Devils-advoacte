@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Devil's Advocate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-mark">◈</span>
+            <span>Devil's <strong>Advocate</strong></span>
+        </div>
+        <a href="{{ url_for('home') }}" class="back-home"></a>
+    </header>
+
+    <main class="login-section">
+        <div class="login-intro">
+            <p class="small-label">WELCOME BACK</p>
+            <h1>
+                Think deeper.<br>
+                <span>Question everything.</span>
+            </h1>
+            <p class="intro-text">
+                Sign in to continue evaluating your business ideas,
+                discover hidden risks and make better decisions.
+            </p>
+            <div class="mini-line"></div>
+            <p class="quote">
+                “A strong idea becomes stronger when it survives tough questions.”
+            </p>
+        </div>
+
+        <div class="login-card">
+            <div class="card-top">
+                <p class="card-label">DEVIL'S ADVOCATE</p>
+                <h2>Welcome back</h2>
+                <p class="card-description">
+                    Sign in to access your idea evaluations.
+                </p>
+            </div>
+
+            <form method="POST" action="/login">
+                <div class="input-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <div class="password-label">
+                        <label for="password">Password</label>
+                        <a href="{{ url_for('forgot_password') }}">Forgot password?</a>
+                    </div>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <label class="remember">
+                    <input type="checkbox">
+                    <span>Remember me</span>
+                </label>
+
+                <button type="submit" class="login-button">
+                    Sign In <span>→</span>
+                </button>
+            </form>
+
+            <div class="divider"><span>or</span></div>
+
+            <button class="guest-button" type="button">
+                Continue as Guest
+            </button>
+
+            <p class="signup-text">
+                Don't have an account?
+                <a href="{{ url_for('register') }}">Create an account</a>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Devil's Advocate · AI-powered business idea evaluation</p>
+    </footer>
+
+</body>
+</html>
